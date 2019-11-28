@@ -10,6 +10,14 @@ public abstract class Knapsack {
             _items = items;
         }
 
+        public int getCapacity(){
+            return _capacity;
+        }
+
+        public Item[] getItems(){
+            return _items;
+        }
+
         public abstract int solve();
 
         @Override

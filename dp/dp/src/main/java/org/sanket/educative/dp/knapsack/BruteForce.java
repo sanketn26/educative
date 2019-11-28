@@ -31,9 +31,21 @@ public class BruteForce implements Algorithm{
 
         @Override
         public int solve() {
-            return -1;
+            if(getCapacity() <= 0)
+                return 0;
+            return solve(0);
         }
 
+        private int solve(int currentIdx){
+            Item[] items = getItems();
+            if(currentIdx >= items.length)
+                return 0;
+
+            int profit1 = 0;
+            
+            int profit2 = solve(currentIdx + 1);
+            return Math.max(profit1, profit2);
+        }
     }
 
 }
