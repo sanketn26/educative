@@ -12,6 +12,6 @@ public class Item{
 
         @Override
         public String toString(){
-            return String.format("{0} : {1}", profit, weight );
+            return String.format("%d : %d", profit, weight );
         }
     }

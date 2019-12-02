@@ -28,6 +28,6 @@ public abstract class Knapsack {
                 items[idx] = it.toString();
             }
 
-            return String.format("Capacity: {0} \n Input: {1}", _capacity, String.join(",", items));
+            return String.format("Capacity: %d \n Input: %s", _capacity, String.join(",", items));
         }
     }
