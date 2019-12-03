@@ -26,8 +26,8 @@ public abstract class Knapsack {
             int idx = 0;
             for (Item it : _items) {
                 items[idx] = it.toString();
+                idx+=1;
             }
-
             return String.format("Capacity: %d \n Input: %s", _capacity, String.join(",", items));
         }
     }

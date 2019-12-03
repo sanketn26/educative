@@ -39,7 +39,9 @@ public class BruteForce implements Algorithm{
             if(capacity <= 0 || currentIdx >= items.length)
                 return 0;
             int profit1 = 0;
-            profit1 = items[currentIdx].profit + solve(capacity - items[currentIdx].weight, currentIdx + 1);
+            if(items[currentIdx].weight <= capacity){ 
+                profit1 = items[currentIdx].profit + solve(capacity - items[currentIdx].weight, currentIdx + 1);
+            }
             int profit2 = solve(capacity, currentIdx + 1);
             return Math.max(profit1, profit2);
         }
