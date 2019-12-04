@@ -2,8 +2,7 @@ package org.sanket.educative.dp;
 
 import java.util.Scanner;
 import org.sanket.educative.dp.common.AlgorithmContainer;
-import org.sanket.educative.dp.knapsack.BruteForce;
-import org.sanket.educative.dp.knapsack.TopDownMemoizationKnapsack;
+import org.sanket.educative.dp.knapsack.*;
 /**
  * Hello world!
  *
@@ -16,6 +15,7 @@ public class App
         
         container.registerAlgorithm(new BruteForce());
         container.registerAlgorithm(new TopDownMemoizationKnapsack());
+        container.registerAlgorithm(new BUKnapsack());
 
         System.out.println("Algorithms available:");
         for (String algoName : container.getAlgoNames()) {
